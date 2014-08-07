@@ -39,12 +39,19 @@
                 <input type="checkbox" ng-model="showHotels" />
                 Show Hotels
               </span>
+              <span>
+                <select ng-model="descLimit">
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </span>
             </div>
 
             <div></div>
 
             <hr/>
-            <div ng-show="!showHotels" class="row" ng-repeat="item in hotels | filter : searchTerm | orderBy : 'rating' : true">
+            <div ng-show="!showHotels" class="row" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
             <div class="row">
               <div class="col-md-1">
                 <div> <button ng-click="upvote(item)" >up</button></div>
@@ -55,7 +62,7 @@
                 <img ng-src="http://i.imgur.com/{{item.img}}" width="70px" />
               </div>
               <div class="col-md-3">
-                <span class="h3" ng-class="(item.price >limit ? highlight_class : '')">{{item.name | uppercase}}</span>
+                <span class="h3" ng-class="(item.price >limit ? 'text-warning' : '')">{{item.name | uppercase}}</span>
                 <div>
                   <span>{{item.location.area | lowercase}}</span>
                 </div>
@@ -68,10 +75,10 @@
                 <span ng-bind="item.price | currency" ng-class="highlight_class"></span>
               </div> 
               <div class="col-md-5">
-                <span ng-hide="showMore">{{item.description | limitTo : 50}}</span>
+                <span ng-hide="showMore">{{item.description | limitTo : descLimit}}</span>
                 <span ng-show="showMore">{{item.description}}</span>
-                <span ng-show="!showMore && item.description.length > 50">...</span>
-                <span ng-show="!showMore && item.description.length > 50"><a href="#" ng-click="showMore=true">more</a></span>
+                <span ng-show="!showMore && item.description.length > descLimit">...</span>
+                <span ng-show="!showMore && item.description.length > descLimit"><a href="#" ng-click="showMore=true">more</a></span>
               </div>
 
             </div>
