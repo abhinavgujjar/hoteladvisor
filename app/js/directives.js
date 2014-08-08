@@ -9,13 +9,21 @@ angular.module('myApp.directives', []).
       elm.text(version);
     };
   }])
-  .directive('previewText', [function() {
+  .directive('hotelEntry', [function() {
+    return {
+      restrict : 'E',
+      templateUrl : 'partials/hotelentry.html',
+      scope :{
+        hotel : '='
+      }
+    }
+  }]).directive('preview', [function() {
     return {
     	restrict : 'E',
     	templateUrl : 'partials/preview.html',
     	scope :{
     		text : '=',
-        previewclass : '@sclass'
+        sclass : '@'
     	}
     }
   }]);
