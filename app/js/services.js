@@ -80,6 +80,9 @@ factory('hotelsProvider', function() {
 	return {
 		getHotels: function() {
 			return hotels;
+		},
+		addHotel : function(hotel){
+			hotels.push(hotel);
 		}
 	};
 
