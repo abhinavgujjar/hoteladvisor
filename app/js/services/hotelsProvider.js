@@ -1,12 +1,16 @@
 angular.module('myApp.services')
-.factory('hotelsProvider', function($http) {
+.factory('hotelsProvider', function($http, $q) {
 
 	
 	return {
-		getHotels: function(callback) {
+		getHotels: function() {
+			var deferred = $q.defer();
+
 			$http.get('data/hotels.json').success(function(data){
-				callback(data.result);
+				deferred.resolve(data.results);
 			});
+
+			return deferred.promise;
 
 		},
 		addHotel : function(hotel){

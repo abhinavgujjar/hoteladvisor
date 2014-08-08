@@ -17,11 +17,10 @@ angular.module('myApp.controllers', [])
 				$location.url('/details');
 			}
 
-			function handleResult(result){
-				$scope.hotels = result;	
-			}
 
-			hotelsProvider.getHotels(handleResult);
+			hotelsProvider.getHotels().then(function(hotels){
+				$scope.hotels = hotels;
+			});
 
 		}
 	]);

@@ -8,4 +8,16 @@ angular.module('myApp.directives', []).
     return function(scope, elm, attrs) {
       elm.text(version);
     };
+  }])
+  .directive('previewText', [function() {
+    return {
+    	restrict : 'E',
+    	templateUrl : 'partials/preview.html',
+    	scope :{
+    		text : '=',
+        previewclass : '@sclass'
+    	}
+    }
   }]);
+
+
