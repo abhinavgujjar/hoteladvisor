@@ -11,6 +11,7 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/listing', {templateUrl: 'partials/listing.html', controller :'mainController'});
   $routeProvider.when('/login', {templateUrl: 'partials/login.html'});
+  $routeProvider.when('/details', {templateUrl: 'partials/details.html', controller :'detailsController'});
   $routeProvider.when('/new', {templateUrl: 'partials/create.html', controller : 'createController'});
   $routeProvider.otherwise({redirectTo: '/login'});
 }]);

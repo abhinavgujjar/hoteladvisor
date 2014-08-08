@@ -1,32 +1,9 @@
 <div >
+	<h2>Details</h2>
+	<br>
+	<hr/>
 	<div>
-		<h2>{{message}}!</h2>
-		<div></div>
-		<br/>
-		<br/>
-		<div>
-			<span>
-				Search :
-				<input type="text" ng-model="searchTerm" />
-			</span>
-			<span>
-				<input type="checkbox" ng-model="showHotels" />
-				Show Hotels
-			</span>
-			<span>
-				<select ng-model="descLimit">
-					<option value="20">20</option>
-					<option value="50">50</option>
-					<option value="100">100</option>
-				</select>
-			</span>
-		</div>
-
-		<div></div>
-
-		<hr/>
-		<div ng-show="!showHotels" class="row" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
-			<div class="row">
+		<div class="row">
 				<div class="col-md-1">
 					<div>
 						<button ng-click="upvote(item)" >up</button>
@@ -64,8 +41,7 @@
 				</span>
 			</div>
 
-		</div>
-		<hr/>
 	</div>
-</div>
+
+
 </div>
