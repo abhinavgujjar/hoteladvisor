@@ -1,6 +1,6 @@
 angular.module('myApp.controllers', [])
-	.controller('mainController', ['$scope', '$rootScope', 'defaults', 'hotelsProvider', 'votingService', '$location',
-		function($scope, $rootScope, defaults, hotelsProvider, vService, $location) {
+	.controller('mainController', ['$scope', '$rootScope', 'defaults', 'hotelsProvider', 'votingService', '$location','$http',
+		function($scope, $rootScope, defaults, hotelsProvider, vService, $location, $http) {
 
 			$rootScope.$broadcast('navbar:display', true);
 
@@ -17,7 +17,11 @@ angular.module('myApp.controllers', [])
 				$location.url('/details');
 			}
 
-			$scope.hotels = hotelsProvider.getHotels();
+			function handleResult(result){
+				$scope.hotels = result;	
+			}
+
+			hotelsProvider.getHotels(handleResult);
 
 		}
 	]);
