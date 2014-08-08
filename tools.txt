@@ -1,0 +1,7 @@
+bower - client dependency
+grunt - running tasks
+jslint - checking javascript code
+batarang - debugging in chrome
+chrome developer tools - 
+jasmine / karma - unit test
+node.js 

@@ -12,6 +12,7 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/listing', {templateUrl: 'partials/listing.html', controller :'mainController'});
   $routeProvider.when('/login', {templateUrl: 'partials/login.html'});
+  $routeProvider.when('/logout', {template: '<div><button>logout</button></div>'});
   $routeProvider.when('/details/:hotelId', {templateUrl: 'partials/details.html', controller :'detailsController'});
   $routeProvider.when('/new', {templateUrl: 'partials/create.html', controller : 'createController'});
   $routeProvider.otherwise({redirectTo: '/login'});
@@ -28,6 +29,15 @@ angular.module('myApp').
     return function(input) {
       return input * 5.7639;
     };
+
+
+  }]).
+  filter('startFrom', [ function() {
+
+    return function(input, start) {
+      start = +start; //parse to int
+      return input.slice(start);
+    }
 
 
   }]);

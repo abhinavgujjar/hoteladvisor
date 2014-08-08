@@ -43,5 +43,38 @@
 		"img": "FS46AwM.jpg",
 		"description": "Or oh active bewitching lent a yikes well ouch much jeez the quail abrasive reserved since classic a then matter-of-fact shuddered.",
 		"area": 45000
+	}, {
+		"id": "5",
+		"name": "Taj West End",
+		"location": {
+			"area": "Race Course Road",
+			"city": "Bangalore"
+		},
+		"price": 17000,
+		"img": "BQ1bQ6T.jpg",
+		"description": "This is a hotel",
+		"area": 120000
+	}, {
+		"id": "6",
+		"name": "Leela Palace",
+		"location": {
+			"area": "Old Airport Road",
+			"city": "Bangalore"
+		},
+		"price": 30000,
+		"img": "O3V6rIK.jpg",
+		"description": "Or oh active bewitching lent a yikes well ouch much jeez the quail abrasive reserved since classic a then matter-of-fact shuddered.",
+		"area": 36000
+	}, {
+		"id": "7",
+		"name": "Hilton",
+		"location": {
+			"area": "Lavelle Road",
+			"city": "Bangalore"
+		},
+		"price": 30000,
+		"img": "FS46AwM.jpg",
+		"description": "Or oh active bewitching lent a yikes well ouch much jeez the quail abrasive reserved since classic a then matter-of-fact shuddered.",
+		"area": 45000
 	}]
 }

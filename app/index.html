@@ -48,7 +48,7 @@
                     <a href="#/new">New</a>
                   </li>
                   <li>
-                    <span class="h3">Selected Hotel</span>
+                    <span ><ticker></ticker></span>
                   </li>
 
                 </ul>
@@ -58,10 +58,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
               <ng-view></ng-view>
-            </div>
           </div>
           <div class="row">
             <ng-include src="'partials/disclaimer.html'"></ng-include>
@@ -76,6 +73,7 @@
         <script src="js/controllers/navController.js"></script>
         <script src="js/controllers/createController.js"></script>
         <script src="js/controllers/detailsController.js"></script>
+        <script src="js/controllers/favController.js"></script>
         <script src="js/services.js"></script>
         <script src="js/services/hotelsProvider.js"></script>
         <script src="js/directives.js"></script>

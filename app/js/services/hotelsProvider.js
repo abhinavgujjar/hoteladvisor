@@ -1,6 +1,7 @@
 angular.module('myApp.services')
 .factory('hotelsProvider', function($http, $q) {
 
+	var favorites = [];
 	
 	return {
 		getHotels: function() {
@@ -15,7 +16,8 @@ angular.module('myApp.services')
 		},
 		addHotel : function(hotel){
 			hotels.push(hotel);
-		}
+		},
+		favorites : favorites
 	};
 
 });
