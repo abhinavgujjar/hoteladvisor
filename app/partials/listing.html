@@ -1,0 +1,69 @@
+        <div >
+          <div ng-controller="mainController">
+            <h2>{{message}}!</h2>
+            <div></div>
+            <br/>        
+            <br/>        
+            <div>
+              <span>
+                Search :
+                <input type="text" ng-model="searchTerm" />        
+              </span>
+              <span>
+                <input type="checkbox" ng-model="showHotels" />        
+                Show Hotels
+              </span>
+              <span>
+                <select ng-model="descLimit">
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </span>
+            </div>
+
+            <div></div>
+
+            <hr/>        
+            <div ng-show="!showHotels" class="row" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+              <div class="row">
+                <div class="col-md-1">
+                  <div>
+                    <button ng-click="upvote(item)" >up</button>
+                  </div>
+                  <div class="h4">{{item.rating}}</div>
+                  <div>
+                    <button ng-click="downvote(item)" >down</button>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <img ng-src="http://i.imgur.com/{{item.img}}" width="70px" />        
+                </div>
+                <div class="col-md-3">
+                  <span class="h3" ng-class="(item.price >limit ? 'text-warning' : '')">{{item.name | uppercase}}</span>
+                  <div>
+                    <span>{{item.location.area | lowercase}}</span>
+                  </div>
+                  <div>
+                    <span class="h4">{{item.area | toFeet | number:1}} sq.ft</span>
+                  </div>
+                </div>
+
+                <div class="col-md-1">
+                  <span ng-bind="item.price | currency" ng-class="highlight_class"></span>
+                </div>
+                <div class="col-md-5">
+                  <span ng-hide="showMore">{{item.description | limitTo : descLimit}}</span>
+                  <span ng-show="showMore">{{item.description}}</span>
+                  <span ng-show="!showMore && item.description.length >descLimit">...</span>
+                  <span ng-show="!showMore && item.description.length >
+                    descLimit">
+                    <a href="#" ng-click="showMore=true">more</a>
+                  </span>
+                </div>
+
+              </div>
+              <hr/>        
+            </div>
+          </div>
+        </div>

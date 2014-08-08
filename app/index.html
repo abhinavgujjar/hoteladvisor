@@ -24,76 +24,48 @@
         <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-        <div class="container">
-          <div ng-controller="mainController">
-            <h2>{{message}}!</h2>
-            <div></div>
-            <br/>
-            <br/>
-            <div>
-              <span>
-                Search :
-                <input type="text" ng-model="searchTerm" />
-              </span>
-              <span>
-                <input type="checkbox" ng-model="showHotels" />
-                Show Hotels
-              </span>
-              <span>
-                <select ng-model="descLimit">
-                  <option value="20">20</option>
-                  <option value="50">50</option>
-                  <option value="100">100</option>
-                </select>
-              </span>
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Hotels Advisor</a>
             </div>
 
-            <div></div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li >
+                  <a href="#">Listing</a>
+                </li>
+                <li>
+                  <a href="#">New</a>
+                </li>
 
-            <hr/>
-            <div ng-show="!showHotels" class="row" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
-            <div class="row">
-              <div class="col-md-1">
-                <div> <button ng-click="upvote(item)" >up</button></div>
-                <div class="h4">{{item.rating}}</div>
-                <div> <button ng-click="downvote(item)" >down</button></div>
-              </div>
-              <div class="col-md-2">
-                <img ng-src="http://i.imgur.com/{{item.img}}" width="70px" />
-              </div>
-              <div class="col-md-3">
-                <span class="h3" ng-class="(item.price >limit ? 'text-warning' : '')">{{item.name | uppercase}}</span>
-                <div>
-                  <span>{{item.location.area | lowercase}}</span>
-                </div>
-                <div>
-                  <span class="h4">{{item.area | toFeet | number:1}} sq.ft </span>
-                </div>
-              </div>
-              
-              <div class="col-md-1">
-                <span ng-bind="item.price | currency" ng-class="highlight_class"></span>
-              </div> 
-              <div class="col-md-5">
-                <span ng-hide="showMore">{{item.description | limitTo : descLimit}}</span>
-                <span ng-show="showMore">{{item.description}}</span>
-                <span ng-show="!showMore && item.description.length > descLimit">...</span>
-                <span ng-show="!showMore && item.description.length > descLimit"><a href="#" ng-click="showMore=true">more</a></span>
-              </div>
-
-            </div>
-            <hr/>
+              </ul>
             </div>
           </div>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1">Sidebar</div>
+            <div class="col-md-10">
+              <ng-view></ng-view>
+            </div>
+          </div>
+          <div class="row">FOOTER</div>
         </div>
-        <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-      -->
-      <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/angular-route/angular-route.js"></script>
-      <script src="js/app.js"></script>
-      <script src="js/services.js"></script>
-      <script src="js/controllers.js"></script>
-      <script src="js/directives.js"></script>
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
 </body>
-    </html>
+      </html>

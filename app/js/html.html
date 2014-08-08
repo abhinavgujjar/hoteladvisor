@@ -1,0 +1,353 @@
+<div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div><div ng-show="!showHotels" class="row ng-scope" ng-repeat="item in hotels | filter : {name: searchTerm} | orderBy : 'rating' : true">
+            <div class="row">
+              <div class="col-md-1">
+                <div> <button ng-click="upvote(item)">up</button></div>
+                <div class="h4 ng-binding"></div>
+                <div> <button ng-click="downvote(item)">down</button></div>
+              </div>
+              <div class="col-md-2">
+                <img ng-src="http://i.imgur.com/BQ1bQ6T.jpg" width="70px" src="http://i.imgur.com/BQ1bQ6T.jpg">
+              </div>
+              <div class="col-md-3">
+                <span class="h3 ng-binding text-warning" ng-class="(item.price >limit ? 'text-warning' : '')">TAJ WEST END</span>
+                <div>
+                  <span class="ng-binding">race course road</span>
+                </div>
+                <div>
+                  <span class="h4 ng-binding">691,668.0 sq.ft </span>
+                </div>
+              </div>
+              
+              <div class="col-md-1">
+                <span ng-bind="item.price | currency" ng-class="highlight_class" class="ng-binding">$17,000.00</span>
+              </div> 
+              <div class="col-md-5">
+                <span ng-hide="showMore" class="ng-binding">This is a hotel</span>
+                <span ng-show="showMore" class="ng-binding ng-hide">This is a hotel</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide">...</span>
+                <span ng-show="!showMore &amp;&amp; item.description.length > descLimit" class="ng-hide"><a href="#" ng-click="showMore=true">more</a></span>
+              </div>
+
+            </div>
+            <hr>
+            </div>
